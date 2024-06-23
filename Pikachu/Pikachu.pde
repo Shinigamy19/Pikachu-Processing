@@ -1,6 +1,9 @@
 PGraphics eye;
 
+
 void setup() {
+  
+  surface.setTitle("Pokemon");
   size(300, 300);
   eye = createGraphics(50, 50);
   eye.beginDraw();
@@ -10,6 +13,9 @@ void setup() {
   eye.fill(255);
   eye.ellipse(eye.width/2 + 5, eye.height/2 - 5, 20, 20);
   eye.endDraw();
+  
+  PImage icon = loadImage("iconom.png");
+  surface.setIcon(icon);
 }
 
 void draw() {
